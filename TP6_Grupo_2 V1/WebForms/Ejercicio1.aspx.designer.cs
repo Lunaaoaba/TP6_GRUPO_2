@@ -7,7 +7,7 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace TP6_Grupo_2_V1.WebForms
+namespace TP6_GRUPO_2.WebForms
 {
 
 

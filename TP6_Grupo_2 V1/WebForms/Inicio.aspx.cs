@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace TP6_Grupo_2_V1.WebForms
+namespace TP6_GRUPO_2.WebForms
 {
     public partial class Inicio : System.Web.UI.Page
     {

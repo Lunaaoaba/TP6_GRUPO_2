@@ -67,6 +67,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Css\Estilos_Inicio.css" />
     <Content Include="Web.config" />
     <Content Include="WebForms\Ejercicio1.aspx" />
     <Content Include="WebForms\Inicio.aspx" />

@@ -22,4 +22,18 @@ public class AccesoDatos
             return null;
         }
     }
+
+    public SqlDataAdapter ObtenerAdaptador(string consulta)
+    {
+        SqlDataAdapter adaptador;
+        try
+        {
+            adaptador = new SqlDataAdapter(consulta, ObtenerConexion());
+            return adaptador;
+        }
+        catch (Exception)
+        {
+            return null;
+        }
+    }
 }

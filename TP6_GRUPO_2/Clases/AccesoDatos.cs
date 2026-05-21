@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 public class AccesoDatos
 {
-    string rutaNeptuno = @"Data Source=localhost\SQLEXPRESS;Initial Catalog = Neptuno; Integrated Security = True";
+    private const string rutaNeptuno = @"Data Source=localhost\SQLEXPRESS;Initial Catalog = Neptuno; Integrated Security = True";
 
     public SqlConnection ObtenerConexion()
     {
@@ -17,7 +17,7 @@ public class AccesoDatos
             conexion.Open();
             return conexion;
         }
-        catch (Exception ex)
+        catch (Exception)
         {
             return null;
         }

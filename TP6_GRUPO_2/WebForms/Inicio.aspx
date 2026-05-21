@@ -61,11 +61,6 @@
             transform: translateY(-2px);
             color: white;
         }
-
-        .auto-style1 {
-            width: 157px;
-        }
-
   </style>
 </head>
 <body>
@@ -76,12 +71,12 @@
                     <td><h1 class="nomargen">Grupo N°2</h1></td>
                 </tr>
                 <tr>
-                    <td class="auto-style1">
+                    <td>
                         <asp:HyperLink ID="hlEjercicio1" runat="server" CssClass="Link" NavigateUrl="~/WebForms/Ejercicio1.aspx">Ejercicio 1</asp:HyperLink>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style1">
+                    <td>
                         <asp:HyperLink ID="hlEjercicio2" runat="server" CssClass="Link">Ejercicio 2</asp:HyperLink>
                     </td>
                 </tr>

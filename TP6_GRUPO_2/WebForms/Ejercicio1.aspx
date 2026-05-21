@@ -9,13 +9,19 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-         <tr>
-             <td>
-                 <h1>Productos</h1>
-             </td>
-         </tr>
-        </div>
+        <table>
+             <tr>
+                 <td>
+                     <h1>Productos</h1>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:GridView ID="gvProductos" runat="server"></asp:GridView>
+                </td>
+            </tr>
+        </table>
+
     </form>
 </body>
 </html>

@@ -17,10 +17,7 @@ public class AccesoDatos
             conexion.Open();
             return conexion;
         }
-        catch (Exception)
-        {
-            return null;
-        }
+        catch (Exception) { return null; }
     }
 
     public SqlDataAdapter ObtenerAdaptador(string consulta)
@@ -31,9 +28,19 @@ public class AccesoDatos
             adaptador = new SqlDataAdapter(consulta, ObtenerConexion());
             return adaptador;
         }
-        catch (Exception)
-        {
-            return null;
-        }
+        catch (Exception){ return null; }
+    }
+    public int EjecutarProcedimientoAlmacenado(SqlCommand comandoSQL, string ProcedimientoAlmacenado) 
+    {
+        int FilasCambiadas;
+        SqlConnection Conexion = ObtenerConexion();
+        SqlCommand sqlCommand = new SqlCommand(); 
+        sqlCommand = comandoSQL; 
+        sqlCommand.Connection = Conexion;
+        sqlCommand.CommandType = CommandType.StoredProcedure;  
+        sqlCommand.CommandText = ProcedimientoAlmacenado; 
+        FilasCambiadas = sqlCommand.ExecuteNonQuery();  
+        Conexion.Close();
+        return FilasCambiadas;
     }
 }

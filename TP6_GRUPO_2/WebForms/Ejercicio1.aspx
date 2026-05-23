@@ -4,24 +4,49 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <link href="../Css/Estilos.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
-        <table>
-             <tr>
-                <td>
-                     <h1>Productos</h1>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <asp:GridView ID="gvProductos" runat="server"></asp:GridView>
-                </td>
-            </tr>
-        </table>
-
+        <h1 class="nomargen">Productos</h1>
+        <asp:GridView ID="gvProductos" runat="server" AutoGenerateColumns="False" AllowPaging="True" OnPageIndexChanging="gvProductos_PageIndexChanging">
+            <Columns>
+                <asp:TemplateField HeaderText="Id Producto">
+                    <EditItemTemplate>
+                        <asp:Label ID="lbl_eit_idProducto" runat="server" Text='<%# Bind("IdProducto") %>'></asp:Label>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="lbl_it_IdProducto" runat="server" Text='<%# Bind("IdProducto") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="Nombre Producto">
+                    <EditItemTemplate>
+                        <asp:TextBox ID="txt_eit_nombreProducto" runat="server" Text='<%# Bind("NombreProducto") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="lbl_it_NombreProducto" runat="server" Text='<%# Bind("NombreProducto") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="Cantidad Por Unidad">
+                    <EditItemTemplate>
+                        <asp:TextBox ID="txt_eit_cantidadXunidad" runat="server" Text='<%# Bind("CantidadPorUnidad") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="lbl_it_CantidadPorUnidad" runat="server" Text='<%# Bind("CantidadPorUnidad") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="Precio Unidad">
+                    <EditItemTemplate>
+                        <asp:TextBox ID="txt_eit_precioUnidad" runat="server" Text='<%# Bind("PrecioUnidad") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="lbl_it_PrecioUnitario" runat="server" Text='<%# Bind("PrecioUnidad") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+            </Columns>
+        </asp:GridView>
     </form>
 </body>
 </html>

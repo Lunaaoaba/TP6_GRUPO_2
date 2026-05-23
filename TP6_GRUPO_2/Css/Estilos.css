@@ -3,7 +3,9 @@
     margin: 0;
     padding: 0;
 }
-
+.auto-style1 {
+    width: 250px;
+}
 body {
     background-color: #5e94b5;
     font-family: Arial, sans-serif;
@@ -31,7 +33,36 @@ form {
 table {
     text-align: center;
 }
+#gvProductos {
+    background-color: #ffffff;
+    border: 3px solid #2c3e50;
+    border-collapse: collapse;
+    width: 100%;
+}
 
+#gvProductos th {
+    background-color: #34495e;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid #2c3e50;
+}
+
+#gvProductos td {
+    padding: 10px;
+    border: 1px solid #bdc3c7;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+#gvProductos tr:nth-child(even) {
+    background-color: #ecf0f1;
+}
+
+#gvProductos tr:hover {
+    background-color: #d4e6f1;
+}
 .Link {
     display: inline-block;
     text-decoration: none;
@@ -48,9 +79,9 @@ table {
     transition: all 0.3s ease;
 }
 
-    .Link:hover {
-        background: linear-gradient(135deg, #ff6b6b, #ff2f2f, #7b0000);
-        box-shadow: 0px 6px 20px rgba(255, 47, 47, 0.7);
-        transform: translateY(-2px);
-        color: white;
-    }
+.Link:hover {
+    background: linear-gradient(135deg, #ff6b6b, #ff2f2f, #7b0000);
+    box-shadow: 0px 6px 20px rgba(255, 47, 47, 0.7);
+    transform: translateY(-2px);
+    color: white;
+}

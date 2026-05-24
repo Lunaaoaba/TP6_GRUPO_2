@@ -70,6 +70,7 @@
     <Content Include="Css\Estilos.css" />
     <Content Include="Web.config" />
     <Content Include="WebForms\Ejercicio1.aspx" />
+    <Content Include="WebForms\Ejercicio2.aspx" />
     <Content Include="WebForms\Inicio.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -83,6 +84,13 @@
     </Compile>
     <Compile Include="WebForms\Ejercicio1.aspx.designer.cs">
       <DependentUpon>Ejercicio1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Ejercicio2.aspx.cs">
+      <DependentUpon>Ejercicio2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Ejercicio2.aspx.designer.cs">
+      <DependentUpon>Ejercicio2.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForms\Inicio.aspx.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>

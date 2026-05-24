@@ -17,7 +17,10 @@ public class AccesoDatos
             conexion.Open();
             return conexion;
         }
-        catch (Exception) { return null; }
+        catch (Exception)
+        { 
+            return null;
+        }
     }
 
     public SqlDataAdapter ObtenerAdaptador(string consulta)
@@ -28,7 +31,10 @@ public class AccesoDatos
             adaptador = new SqlDataAdapter(consulta, ObtenerConexion());
             return adaptador;
         }
-        catch (Exception){ return null; }
+        catch (Exception)
+        { 
+            return null;
+        }
     }
     public int EjecutarProcedimientoAlmacenado(SqlCommand comandoSQL, string ProcedimientoAlmacenado) 
     {

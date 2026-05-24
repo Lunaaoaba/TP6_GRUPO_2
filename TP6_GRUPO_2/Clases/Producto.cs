@@ -22,6 +22,19 @@ namespace TP6_Grupo_2_V1.Clases
         {
 
         }
+        public Producto(int idProducto)
+        {
+            _idProducto = idProducto;
+        }
+
+        public Producto(int idproducto, string nombreproducto, string cantidadporunidad, decimal preciounidad)
+        {
+            _idProducto = idproducto;
+            _nombreProducto = nombreproducto;
+            _cantidadPorUnidad = cantidadporunidad;
+            _precioUnidad = preciounidad;
+        }
+
 
         public Producto(int idProducto, string nombreProducto, int idProveedor, int idCategoria,
                         string cantidadPorUnidad, decimal precioUnidad, short unidadesEnExistencia,

@@ -56,8 +56,10 @@ namespace TP6_Grupo_2_V1.Clases
             AccesoDatos acceso = new AccesoDatos();
             int filasAfectadas = acceso.EjecutarProcedimientoAlmacenado(comando, "spActualizarProducto");
             
-            if(filasAfectadas == 1){return true;}
-            else {return false;}
+            if(filasAfectadas == 1)
+                return true;
+            else 
+                return false;
         }
 
         public bool EliminarProducto(Producto producto)
@@ -67,8 +69,10 @@ namespace TP6_Grupo_2_V1.Clases
             AccesoDatos acceso = new AccesoDatos();
             int filasAfectadas = acceso.EjecutarProcedimientoAlmacenado(comando, "spEliminarProducto");
 
-            if(filasAfectadas == 1){return true;}
-            else {return false;}
+            if(filasAfectadas == 1)
+                return true;
+            else 
+                return false;
         }
     }
     

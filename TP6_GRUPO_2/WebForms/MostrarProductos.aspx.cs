@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data;
 
 namespace TP6_Grupo_2_V1.WebForms
 {
@@ -11,7 +12,16 @@ namespace TP6_Grupo_2_V1.WebForms
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            CargarTabla(); 
+        }
 
+        public void CargarTabla()
+        {
+            if (Session["tabla"] != null)
+            {
+                gvProductosSeleccionados.DataSource = (DataTable)Session["tabla"];
+                gvProductosSeleccionados.DataBind();
+            }
         }
     }
 }

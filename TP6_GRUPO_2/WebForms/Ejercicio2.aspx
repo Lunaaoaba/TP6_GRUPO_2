@@ -11,7 +11,7 @@
     <form id="form1" runat="server">
         <div>
             <h1>Inicio</h1>
-            <asp:HyperLink ID="HyperLink1" runat="server">HyperLink</asp:HyperLink><br />
+            <asp:HyperLink ID="HlSeleccionarProductos" runat="server" NavigateUrl="~/WebForms/SeleccionarProductos.aspx">Seleccionar Productos</asp:HyperLink><br />
             <asp:LinkButton ID="LinkButton1" runat="server">LinkButton</asp:LinkButton><br />
             <asp:HyperLink ID="HyperLink2" runat="server">HyperLink</asp:HyperLink>
         </div>

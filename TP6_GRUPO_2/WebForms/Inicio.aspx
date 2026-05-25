@@ -22,7 +22,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <asp:HyperLink ID="hlEjercicio2" runat="server" CssClass="Link">Ejercicio 2</asp:HyperLink>
+                        <asp:HyperLink ID="hlEjercicio2" runat="server" CssClass="Link" NavigateUrl="~/WebForms/Ejercicio2.aspx">Ejercicio 2</asp:HyperLink>
                     </td>
                 </tr>
             </table>

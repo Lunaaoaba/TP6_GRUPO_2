@@ -11,7 +11,7 @@ namespace TP6_Grupo_2_V1.WebForms
 {
 
 
-    public partial class Ejercicio2
+    public partial class SeleccionarProductos
     {
 
         /// <summary>
@@ -24,30 +24,30 @@ namespace TP6_Grupo_2_V1.WebForms
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Control HlSeleccionarProductos.
+        /// Control gvProductos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HlSeleccionarProductos;
+        protected global::System.Web.UI.WebControls.GridView gvProductos;
 
         /// <summary>
-        /// Control LinkButton1.
+        /// Control lblMensaje.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
+        protected global::System.Web.UI.WebControls.Label lblMensaje;
 
         /// <summary>
-        /// Control HyperLink2.
+        /// Control hlInicio.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink2;
+        protected global::System.Web.UI.WebControls.HyperLink hlInicio;
     }
 }

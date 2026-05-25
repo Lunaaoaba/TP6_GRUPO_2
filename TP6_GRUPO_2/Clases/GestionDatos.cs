@@ -21,7 +21,7 @@ namespace TP6_Grupo_2_V1.Clases
         }
         public DataTable TablaProductos()
         {
-            return ObtenerTabla("Productos", "SELECT IdProducto, NombreProducto, CantidadPorUnidad, PrecioUnidad FROM Productos");
+            return ObtenerTabla("Productos", "SELECT IdProducto, NombreProducto, IdProveedor, CantidadPorUnidad, PrecioUnidad FROM Productos");
         }
         
         

@@ -72,6 +72,7 @@
     <Content Include="WebForms\Ejercicio1.aspx" />
     <Content Include="WebForms\Ejercicio2.aspx" />
     <Content Include="WebForms\Inicio.aspx" />
+    <Content Include="WebForms\SeleccionarProductos.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\AccesoDatos.cs" />
@@ -98,6 +99,13 @@
     </Compile>
     <Compile Include="WebForms\Inicio.aspx.designer.cs">
       <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\SeleccionarProductos.aspx.cs">
+      <DependentUpon>SeleccionarProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\SeleccionarProductos.aspx.designer.cs">
+      <DependentUpon>SeleccionarProductos.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

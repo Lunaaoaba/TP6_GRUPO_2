@@ -33,13 +33,13 @@ namespace TP6_Grupo_2_V1.WebForms
         protected global::System.Web.UI.WebControls.HyperLink HlSeleccionarProductos;
 
         /// <summary>
-        /// Control LinkButton1.
+        /// Control lbEliminarProducto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
+        protected global::System.Web.UI.WebControls.LinkButton lbEliminarProducto;
 
         /// <summary>
         /// Control HlMostrarProductos.

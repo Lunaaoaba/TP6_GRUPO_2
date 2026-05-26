@@ -12,7 +12,10 @@ namespace TP6_Grupo_2_V1.WebForms
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            CargarTabla(); 
+            if (!Page.IsPostBack)
+            {
+                CargarTabla();
+            }
         }
 
         public void CargarTabla()

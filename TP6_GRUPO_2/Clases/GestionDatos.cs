@@ -27,26 +27,15 @@ namespace TP6_Grupo_2_V1.Clases
         
         private void ArmarParametrosProductosEliminar(ref SqlCommand Comando, Producto producto)
         {
-            SqlParameter parametro = new SqlParameter();
-            parametro = Comando.Parameters.Add("@IdProducto", SqlDbType.Int);
-            parametro.Value = producto.IdProducto;
+            Comando.Parameters.Add("@IDPRODUCTO", SqlDbType.Int).Value = producto.IdProducto;
         }
 
         private void ArmarParametrosProductosActualizar(ref SqlCommand Comando, Producto producto)
         { 
-            SqlParameter parametro = new SqlParameter();
-
-            parametro = Comando.Parameters.Add("@IdProducto", SqlDbType.Int);
-            parametro.Value = producto.IdProducto;
-
-            parametro = Comando.Parameters.Add("@NombreProducto", SqlDbType.VarChar);
-            parametro.Value = producto.NombreProducto;
-
-            parametro = Comando.Parameters.Add("@CantidadPorUnidad", SqlDbType.VarChar);
-            parametro.Value = producto.CantidadPorUnidad;
-
-            parametro = Comando.Parameters.Add("@PrecioUnidad", SqlDbType.Decimal);
-            parametro.Value = producto.PrecioUnidad;
+            Comando.Parameters.Add("@IDPRODUCTO", SqlDbType.Int).Value = producto.IdProducto;
+            Comando.Parameters.Add("@NOMBREPRODUCTO", SqlDbType.NVarChar, 40).Value = producto.NombreProducto ?? "";
+            Comando.Parameters.Add("@CANTIDADPORUNIDAD", SqlDbType.NVarChar, 20).Value = producto.CantidadPorUnidad ?? "";
+            Comando.Parameters.Add("@PRECIOUNIDAD", SqlDbType.Money).Value = producto.PrecioUnidad;
         }
 
         public bool ActualizarProducto(Producto producto)
@@ -54,9 +43,9 @@ namespace TP6_Grupo_2_V1.Clases
             SqlCommand comando = new SqlCommand();
             ArmarParametrosProductosActualizar(ref comando, producto);
             AccesoDatos acceso = new AccesoDatos();
-            int filasAfectadas = acceso.EjecutarProcedimientoAlmacenado(comando, "spActualizarProducto");
-            
-            if(filasAfectadas == 1)
+            int filasAfectadas = acceso.EjecutarProcedimientoAlmacenado(comando, "spActualizaErProducto");
+
+            if (filasAfectadas == 1)
                 return true;
             else 
                 return false;

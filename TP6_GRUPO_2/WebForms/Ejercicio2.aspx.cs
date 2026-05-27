@@ -16,7 +16,7 @@ namespace TP6_Grupo_2_V1.WebForms
 
         protected void lbEliminarProducto_Click(object sender, EventArgs e)
         {
-            if (Session["tabla"] != null) Session["tabla"] = null;
+            Session.Clear();
         }
     }
 }

@@ -40,14 +40,20 @@ namespace TP6_Grupo_2_V1.WebForms
             string IdProveedor = ((Label)gvProductos.Rows[e.NewSelectedIndex].FindControl("lbl_it_IdProveedor")).Text;
             string PrecioUnitario = ((Label)gvProductos.Rows[e.NewSelectedIndex].FindControl("lbl_it_PrecioUnitario")).Text;
 
-
-            lblMensaje.Text = "Usted ha seleccionado el producto: " + NombreProducto;
-
             if (Session["tabla"] == null)
             {
                 Session["tabla"] = CreateTabla();
             }
-            agregarFila((DataTable)Session["tabla"], IdProducto, NombreProducto, IdProveedor, PrecioUnitario);
+
+            if (((DataTable)Session["tabla"]).Select("IdProducto = '" + IdProducto + "'").Length > 0)
+            {
+                lblMensaje.Text = "El producto '" + NombreProducto + "' ya fue seleccionado.";
+            }
+            else
+            {
+                lblMensaje.Text = "Usted ha seleccionado el producto: " + NombreProducto;
+                agregarFila((DataTable)Session["tabla"], IdProducto, NombreProducto, IdProveedor, PrecioUnitario);
+            }
         }
         private DataTable CreateTabla()
         {

@@ -67,7 +67,7 @@ table {
     display: inline-block;
     text-decoration: none;
     text-align: center;
-    background: linear-gradient(135deg, #7b0000, #ff2f2f, #ff6b6b);
+    background: linear-gradient(135deg, #2c3e50, #5e94b5, #34495e);
     color: midnightblue;
     font-size: 15px;
     font-weight: bold;
@@ -79,9 +79,12 @@ table {
     transition: all 0.3s ease;
 }
 
-.Link:hover {
-    background: linear-gradient(135deg, #ff6b6b, #ff2f2f, #7b0000);
-    box-shadow: 0px 6px 20px rgba(255, 47, 47, 0.7);
-    transform: translateY(-2px);
-    color: white;
+    .Link:hover {
+        background: linear-gradient(135deg, #2c3e50, #5e94b5, #34495e);
+        box-shadow: 0px 6px 20px rgba(255, 47, 47, 0.7);
+        transform: translateY(-2px);
+        color: white;
+    }
+
+
 }

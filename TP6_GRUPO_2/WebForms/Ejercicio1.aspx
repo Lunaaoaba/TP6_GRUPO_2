@@ -24,6 +24,9 @@
                 <asp:TemplateField HeaderText="Nombre Producto">
                     <EditItemTemplate>
                         <asp:TextBox ID="txt_eit_nombreProducto" runat="server" Text='<%# Bind("NombreProducto") %>'></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvNombreProducto" runat="server" ControlToValidate="txt_eit_nombreProducto" ErrorMessage="Ingrese un Nombre "></asp:RequiredFieldValidator>
+                        <br />
+                        <asp:RegularExpressionValidator ID="revNombre" runat="server" ControlToValidate="txt_eit_nombreProducto" ErrorMessage="Ingrese un Nombre Valido" ValidationExpression="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$"></asp:RegularExpressionValidator>
                     </EditItemTemplate>
                     <ItemTemplate>
                         <asp:Label ID="lbl_it_NombreProducto" runat="server" Text='<%# Bind("NombreProducto") %>'></asp:Label>
@@ -32,6 +35,9 @@
                 <asp:TemplateField HeaderText="Cantidad Por Unidad">
                     <EditItemTemplate>
                         <asp:TextBox ID="txt_eit_cantidadXunidad" runat="server" Text='<%# Bind("CantidadPorUnidad") %>'></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvCantidadProducto" runat="server" ControlToValidate="txt_eit_cantidadXunidad" ErrorMessage="Ingrese una Cantidad"></asp:RequiredFieldValidator>
+                        <br />
+                        <asp:RegularExpressionValidator ID="revCantidad" runat="server" ControlToValidate="txt_eit_cantidadXunidad" ErrorMessage="Ingrese una Cantidad Valida" ValidationExpression="^[a-zA-Z0-9\s\-\.]+$"></asp:RegularExpressionValidator>
                     </EditItemTemplate>
                     <ItemTemplate>
                         <asp:Label ID="lbl_it_CantidadPorUnidad" runat="server" Text='<%# Bind("CantidadPorUnidad") %>'></asp:Label>
@@ -40,6 +46,9 @@
                 <asp:TemplateField HeaderText="Precio Unidad">
                     <EditItemTemplate>
                         <asp:TextBox ID="txt_eit_precioUnidad" runat="server" Text='<%# Bind("PrecioUnidad") %>'></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="rfvPrecioUnidad" runat="server" ControlToValidate="txt_eit_precioUnidad" ErrorMessage="Ingrese un Precio"></asp:RequiredFieldValidator>
+                        <br />
+                        <asp:RegularExpressionValidator ID="revPrecioUnidad" runat="server" ControlToValidate="txt_eit_precioUnidad" ErrorMessage="Ingrese un Precio valido (ej: 30.50 o 30,50)" ValidationExpression="^[0-9]+([.,][0-9]+)?$"></asp:RegularExpressionValidator>
                     </EditItemTemplate>
                     <ItemTemplate>
                         <asp:Label ID="lbl_it_PrecioUnitario" runat="server" Text='<%# Bind("PrecioUnidad") %>'></asp:Label>
@@ -47,6 +56,9 @@
                 </asp:TemplateField>
             </Columns>
         </asp:GridView>
+        <br />
+        <asp:HyperLink ID="hlInicio" runat="server" NavigateUrl="~/WebForms/Inicio.aspx">Volver a Inicio.Aspx</asp:HyperLink>
+        <br />
     </form>
 </body>
 </html>

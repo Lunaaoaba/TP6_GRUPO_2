@@ -38,15 +38,27 @@ public class AccesoDatos
     }
     public int EjecutarProcedimientoAlmacenado(SqlCommand comandoSQL, string ProcedimientoAlmacenado) 
     {
-        int FilasCambiadas;
         SqlConnection Conexion = ObtenerConexion();
-        SqlCommand sqlCommand = new SqlCommand(); 
-        sqlCommand = comandoSQL; 
-        sqlCommand.Connection = Conexion;
-        sqlCommand.CommandType = CommandType.StoredProcedure;  
-        sqlCommand.CommandText = ProcedimientoAlmacenado; 
-        FilasCambiadas = sqlCommand.ExecuteNonQuery();  
-        Conexion.Close();
-        return FilasCambiadas;
+        if (Conexion == null)
+            return 0;
+
+        try
+        {
+            comandoSQL.Connection = Conexion;
+            comandoSQL.CommandType = CommandType.StoredProcedure;  
+            comandoSQL.CommandText = ProcedimientoAlmacenado;
+            int FilasCambiadas = comandoSQL.ExecuteNonQuery();
+            return FilasCambiadas;
+        }
+        catch (Exception ex)
+        {
+            System.Diagnostics.Debug.WriteLine("Error en procedimiento: " + ex.Message);
+            return 0;
+        }
+        finally
+        {
+            if (Conexion != null && Conexion.State == ConnectionState.Open)
+                Conexion.Close();
+        }
     }
 }
